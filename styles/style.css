@@ -1,0 +1,241 @@
+*, .skip-btn{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: calc(1vw);
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    overflow: hidden;
+}
+
+*::selection {
+    background-color: #333;
+    color: #FFE2B8;
+}
+
+body {
+    background-color: #FFE2B8;
+    /*bbAAdd*/
+}
+.container {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.header,
+.footer {
+    width: 100vw;
+    height: 5vh;
+    background-color: #333;
+}
+
+.header_content,
+.footer_content {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_content_item,
+.footer_content_item {
+    margin: 0 1vw;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.search_field {
+    color: #4d402d;
+    width: 30vw;
+    height: 3vh;
+    border: none;
+    border-radius: 50px;
+    padding: 0 1vw;
+    background-color: #FFE2B8;
+}
+
+.main {
+    height: 90vh;
+    padding: 0 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video {
+    width: 70vw;
+    height: 80vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6em;
+    color: #FFE2B8;
+    text-transform: uppercase;
+    user-select: none;
+    font-weight: 100;
+}
+
+.video_preview{
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    width: 30vw;
+    height: 15vh;
+    background: linear-gradient(0deg, #333, #444, #333);
+    opacity: 0;
+    transition: opacity .5s;
+    align-items: center;
+    padding: .5%;
+    overflow: hidden;
+}
+
+.video_preview_text_info {
+    height: 90%;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.video_preview__thumbnail {
+    flex-shrink: 0;
+    height: 90%;
+}
+
+.video_preview__title {
+    color: #FFE2B8;
+}
+
+.video_preview__author {
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+.video_preview::after {
+    content: 'ADD VIDEO';
+    display: flex;
+    background-color: #222C;
+    color: #FFE2B8;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.video_preview:hover::after {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.videoplayer {
+    border: none;
+}
+.queue{
+    height: 50%;
+    font-size: .5rem;
+}
+.queue_wrapper{
+    width: 20vw;
+    height: 80vh;
+    background-color: #333;
+}
+.queue_list{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    user-select: none;
+}
+.queue_list::-webkit-scrollbar {
+    width: 5px;
+}
+.queue_list::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+	background-color: #FEBC;
+}
+.queue_item {
+    position: relative;
+    display: flex;
+    padding: 5%;
+    width: 100%;
+    height: 15vh;
+    transition: .2s;
+}
+.queue__thumbnail{
+    flex-shrink: 0;
+}
+.queue_item:hover {
+    background-color: #444;
+}
+.controls{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.remove-btn{
+    user-select: none;
+    transition: .5s;
+    opacity: 0;
+}
+.remove-btn:hover{
+    opacity: 1;
+}
+.remove-btn > *{
+    transition: .5s;
+    fill: #aaa;
+}
+.remove-btn > *:hover{
+    fill: #FFE2B8;
+}
+.queue_item:hover .controls .remove-btn{
+    opacity: 1;
+}
+.contact_icon {
+    transition: .2s;
+}
+.contact_icon:hover {
+    fill: #FFE2B8;
+    width: 2.5vw;
+    height: 4.5vh;
+}
+.dragging{
+    opacity: 0.5;
+}
+.drag_over{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    background-color: #FFE2B855;
+}
+@media (max-width: 498px) {
+    .main{
+        flex-direction: column;
+    }
+    .video{
+        padding: 1%;
+        width: 100vw;
+        height: 100%;
+    }
+    .queue_wrapper{
+        padding: 1%;
+        width: 100vw;
+        height: 100%;
+    }
+    .queue_item{
+        padding: 1%;
+    }
+}

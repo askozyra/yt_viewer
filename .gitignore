@@ -1,0 +1,5 @@
+# Ignore vendor
+vendor/
+
+# Ignore confidential data
+/.env

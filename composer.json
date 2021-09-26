@@ -1,0 +1,14 @@
+{
+    "name": "acer/portfolio1",
+    "authors": [
+        {
+            "name": "askozyra",
+            "email": "khnu2019@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "vlucas/phpdotenv": "^5.3",
+        "google/apiclient": "^2.10"
+    }
+}
