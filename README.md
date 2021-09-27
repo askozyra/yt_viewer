@@ -3,7 +3,7 @@
 <p align="center">
   <h1 align="center">YouTube Viewer</h3>
   <p align="center">
-  <img src="https://user-images.githubusercontent.com/72695696/134879629-7c0e7a52-c5b3-484c-b774-82290cf00e9b.png">
+    <img src="https://user-images.githubusercontent.com/72695696/134879629-7c0e7a52-c5b3-484c-b774-82290cf00e9b.png">
   </p>
   <p align="center">
     View YouTube videos not on YouTube!
